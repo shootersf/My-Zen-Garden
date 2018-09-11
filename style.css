@@ -1,24 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,400i,700|Ruslan+Display');
+
 html {
 	margin: 0;
 	padding: 0;
 }
 
 body { 
-	color: #555753; 
+    background-color: white;
+	color: #7b7e77; 
 	margin: 0; 
-	padding: 0;
+    padding: 0;
+    font-family: "Arvo";
+    font-size: 1.3em;
+    overflow-x: hidden;
 }
 
 p { 
-	margin-top: 0; 
+	margin: 0; 
 }
 
 abbr {
     text-decoration: none;
 }
 
+a, a:visited {
+    color: #00CBFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #008EB2;
+}
+
+ul {
+    list-style: none;
+}
+
 .page-wrapper {
     display: grid;
+    align-items: start;
     grid-template-columns: repeat(3, 1fr);
     width: 80%;
     margin: 0 auto;
@@ -31,22 +51,37 @@ abbr {
 }
 
 header {
-    height: 25em;
+    height: 20em;
     text-align: center;
     background: linear-gradient(rgba(11, 92, 11,0.45), rgba(11, 92, 11,0.45)),
     url("images/abstract.jpg") no-repeat bottom;
+    font-family: "Ruslan Display";
+    color: #00CBFF;
+    padding-top: 3em;
 
 }
 
 header h1 {
-    margin: 0;
-    padding: 1.2em 0 0 0;
-    color: white;
-    font-size: 3em;
+    margin: 0 auto;
+    padding: 0.2em 0;
+    font-size: 4em;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-bottom: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 header h2 {
-    color: white;
+    font-size: 2em;
+    margin: 0 auto;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    border: 3px solid black;  
+    border-top: none;  
 }
 
 .summary {
@@ -54,6 +89,15 @@ header h2 {
     top: -200px;
     text-align: center;
     color: whitesmoke;
+    font-size: 1.2em;
+    width: 70%;
+    padding: 0 5%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    border: 3px solid black; 
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; 
 }
 
 .summary p {
@@ -63,6 +107,22 @@ header h2 {
 .preamble {
     width: 55%;
     margin: 0 auto;
+    margin-bottom: 3em;
+    position: relative;
+    color: #555753;
+}
+
+.preamble::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    background-color: #F9A32A;
+    z-index: -1;
+    transform: scale(3, 1.2);
 }
 
 .preamble h3 {
@@ -87,6 +147,25 @@ header h2 {
     display: contents;
 }
 
+.explanation,
+.participation,
+.benefits,
+.requirements
+{
+    padding: 2.3em;
+}
+
+.explanation,
+.requirements
+{
+    padding-right: 4em;
+}
+
+.participation,
+.benefits {
+    padding-left: 4em;
+}
+
 .explanation {
     grid-column: 1 / span 2;
 }
@@ -105,8 +184,11 @@ header h2 {
 
 footer {
     grid-column: 1 / span 3;
-
     text-align: center;
+    font-size: 2.3em;
+    word-spacing: 2em;
+    margin-top: 2em;
+    padding-bottom: 0.2em;
 }
 
 /* Sidebar */
@@ -114,6 +196,37 @@ footer {
 .sidebar,
 .wrapper {
     display: contents;
+}
+
+.sidebar {
+    line-height: 2;
+    text-transform: uppercase;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources {
+    padding: 1.3em;
+    margin-top: 7.7em;
+    border: 3px solid #00CBFF;
+    justify-self: center;
+    position: relative;
+}
+
+.design-selection::after,
+.design-archives::after,
+.zen-resources::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(249, 163, 42, .65);
+    transform: scale(1.2);
+    border-radius: 8px;
 }
 
 .design-selection {
